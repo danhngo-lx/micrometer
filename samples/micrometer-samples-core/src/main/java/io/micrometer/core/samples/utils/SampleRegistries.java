@@ -114,7 +114,7 @@ public class SampleRegistries {
 
         try {
             HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
-            server.createContext("/prometheus", httpExchange -> {
+            server.createContext("/metrics", httpExchange -> {
                 String response = prometheusRegistry.scrape();
                 httpExchange.sendResponseHeaders(200, response.length());
                 OutputStream os = httpExchange.getResponseBody();

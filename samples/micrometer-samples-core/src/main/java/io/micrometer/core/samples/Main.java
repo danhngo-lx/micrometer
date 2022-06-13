@@ -29,7 +29,7 @@ import java.time.Duration;
 
 import static java.util.Collections.singletonList;
 
-public class KafkaMetricsSample {
+public class Main {
 
     private static final String TOPIC = "my-example-topic";
 
